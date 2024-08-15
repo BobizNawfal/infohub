@@ -108,7 +108,7 @@ export async function handler(chatUpdate) {
                     sPromote: '',
                     sDemote: '',
                     delete: false,
-                    antiLink: false,
+                    antiLink: true,
                     antiCall: false,
                     antiFoto: false,
                     antiVideo: false,
@@ -685,17 +685,17 @@ let mentionedJid = [m.sender]
 let name = conn.getName(m.sender)
 
 let msg = {
-    premium: 'Sorry, this feature can only be used by *Premium* users',
-    group: 'This feature can only be used within groups',       
-    private: 'This feature can only be used within private',       
-    botAdmin: 'Make the bot an admin, to be able to access the group',
-    admin: 'Make the admin, to be able to access the group',
-    restrict: 'Restrict Not Turned On For This Chat',
-    game: 'Feature *Game* Not Turned On For This Chat',
-    rpg: 'Feature *Rpg* Not Turned On For This Chat',
-    rowner: 'Real Owner special feature, *Users* cannot access it :!',
-    owner: 'Real Owner special feature, *Users* cannot access it :!',
-    unreg: `*To be able to access all Bot features,*\n*You have to \`\`\`REGISTER\`\`\` first.*\*To _register_ the method is quite easy*\n*type: /register name.age *\nother way:\n*type: @verify*`
+    premium: 'عذراً، لا يمكن استخدام هذه الميزة إلا من قبل مستخدمي *Premium*',
+    group: 'لا يمكن استخدام هذه الميزة إلا داخل المجموعات',       
+    private: 'لا يمكن استخدام هذه الميزة إلا داخل القطاع الخاص',       
+    botAdmin: 'اجعل البوت مسؤولاً حتى يتمكن من الوصول إلى المجموعة',
+    admin: 'اجعل المشرف قادرًا على الوصول إلى المجموعة',
+    restrict: 'لم يتم تشغيل التقييد لهذه الدردشة',
+    game: 'ميزة *اللعبة* غير مفعلة لهذه الدردشة',
+    rpg: 'لم يتم تشغيل ميزة *Rpg* لهذه الدردشة',
+    rowner: 'ميزة خاصة للمالك الحقيقي، لا يستطيع *المستخدمون* الوصول إليها:!',
+    owner: 'ميزة خاصة للمالك الحقيقي، لا يستطيع *المستخدمون* الوصول إليها:!',
+    unreg: `*لتتمكن من الوصول إلى جميع ميزات الروبوت,*\n*عليك أن \`\`\`يسجل\`\`\` first.*\*To _register_ the method is quite easy*\n*type: /register name.age *\nother way:\n*type: @verify*`
         }[type]
         
   if (msg) return conn.sendMessage(m.chat, {
