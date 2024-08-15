@@ -33,7 +33,7 @@ const time = tz('Africa/casablanca').format('HH:mm:ss');
 const currentFilePath = new URL(import.meta.url).pathname;
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-let bot_ku = 'SILANA BOT'
+let bot_ku = '𝙞𝙣𝙛𝙤𝙝𝙪𝙗'
 say(bot_ku, {
   font: "simpleBlock",
   align: "center",
@@ -51,7 +51,7 @@ app.listen(port, () => {
 const folderPath = './tmp';
     if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath);
-        console.log(chalk.green('Folder tmp created successfully.'));
+        console.log(chalk.green('تم إنشاء المجلد tmp بنجاح.'));
         }
         
 let isRunning = false;
@@ -67,7 +67,7 @@ async function start(file) {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
   });
     p.on("message", data => {
-    console.log(chalk.magenta("[ ✅ Accepted  ]", data))
+    console.log(chalk.magenta("[ ✅ مقبول  ]", data))
         switch (data) {
             case "reset":
                 p.process.kill()
@@ -81,7 +81,7 @@ async function start(file) {
     })
     p.on("exit", (_, code) => {
         isRunning = false
-        console.error("[❗] Exit with code :", code)
+        console.error("[❗] الخروج بالرمز :", code)
         if (code !== 0) return start(file)
         watchFile(args[0], () => {
             unwatchFile(args[0])
@@ -101,14 +101,14 @@ const pluginsFolder = join(dirname(currentFilePath), 'plugins');
 const totalFoldersAndFiles = await getTotalFoldersAndFiles(pluginsFolder);
   fs.readdir(pluginsFolder, async (err, files) => {
     if (err) {
-      console.error(chalk.red(`Folder Plugins Error: ${err}`));
+      console.error(chalk.red(`خطأ في مكونات(Plugins) المجلد الإضافية: ${err}`));
       return;
     }
 
     try {
-      console.log(chalk.bgGreen(chalk.white(`Library Baileys Versi ${(await fetchLatestBaileysVersion()).version} Telah Terinstall`)));
+      console.log(chalk.bgGreen(chalk.white(`نسخة مكتبة بايلي ${(await fetchLatestBaileysVersion()).version} تم التثبيت`)));
     } catch (e) {
-      console.error(chalk.bgRed(chalk.white('Baileys Library Not Installed')));
+      console.error(chalk.bgRed(chalk.white('مكتبة Baileys غير مثبتة')));
     }
   })
 
@@ -134,7 +134,7 @@ const totalFoldersAndFiles = await getTotalFoldersAndFiles(pluginsFolder);
 ┣ Feature: ${chalk.white(totalFoldersAndFiles.files)} Feature
 ╰──⎔⎔ 
 
-⎔──⎔⎔ Creator: ${chalk.bold.cyan('NOUREDDINE OUAFY')} ⎔⎔──⎔`)
+⎔──⎔⎔ Creator: ${chalk.bold.cyan('NAWFAL NL')} ⎔⎔──⎔`)
     
   } catch (err) {
     console.error(chalk.red(`Can not read File package.json: ${err}`));
