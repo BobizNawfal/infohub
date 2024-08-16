@@ -1,8 +1,8 @@
 /*
-wa.me/6282285357346
-github: https://github.com/sadxzyq
-Instagram: https://instagram.com/tulisan.ku.id
-ini wm gw cok jan di hapus
+wa.me/212707676259
+github: https://github.com/BobizNawfal
+Instagram: https://instagram.com/nawfal_the_ghost
+أنا آسف إذا قمت بحذف هذا
 */
 
 import './config.js'
@@ -300,10 +300,10 @@ async function connectionUpdate(update) {
     // console.log(JSON.stringify(update, null, 4))
     if (global.db.data == null) loadDatabase()
     if (connection === "open") {
-    console.log(chalk.bgGreen(chalk.white('The bot is ON')));
+    console.log(chalk.bgGreen(chalk.white('البوت قيد التشغيل')));
     }
     if (connection == 'close') {
-        console.log(chalk.yellow(`📡 Connection has been lost. delete the session and retake the session to run the Bot`));
+        console.log(chalk.yellow(`📡 تم فقد الاتصال. احذف session وأعد session لتشغيل الروبوت`));
     }
 }
 
